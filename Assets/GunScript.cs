@@ -9,6 +9,7 @@ public class GunScript : MonoBehaviour
     public float range = 100f;
 
     public Camera FPSCam;
+    // public gameObject Projectile;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,9 @@ public class GunScript : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
+
+        // Create the bullet objects
+        // Instantiate(Projectile, FPSCam.transform.forward.position, FPSCam.transform.rotation);
 
         if (Physics.Raycast(FPSCam.transform.position, FPSCam.transform.forward, out hit, range))
         {

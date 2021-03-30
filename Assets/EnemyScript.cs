@@ -31,7 +31,7 @@ public class EnemyScript : MonoBehaviour
     public void Damage(float amount)
     {
         health -= amount;
-        if ( health == 0)
+        if ( health == 0f)
         {
             Dead();
         }
